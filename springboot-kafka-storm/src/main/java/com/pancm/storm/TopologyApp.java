@@ -3,6 +3,10 @@ package com.pancm.storm;
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.StormSubmitter;
+import org.apache.storm.kafka.BrokerHosts;
+import org.apache.storm.kafka.KafkaSpout;
+import org.apache.storm.kafka.SpoutConfig;
+import org.apache.storm.kafka.ZkHosts;
 import org.apache.storm.topology.TopologyBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +15,8 @@ import org.springframework.stereotype.Component;
 import com.pancm.constant.Constants;
 import com.pancm.storm.bolt.InsertBolt;
 import com.pancm.storm.spout.KafkaInsertDataSpout;
+
+import kafka.api.OffsetRequest;
 
 /**
  * 
@@ -57,4 +63,5 @@ public class TopologyApp {
 		logger.info("storm启动成功...");
 
 	}
+	 
 }
