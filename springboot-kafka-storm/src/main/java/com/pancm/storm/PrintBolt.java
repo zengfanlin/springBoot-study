@@ -24,7 +24,6 @@ public class PrintBolt extends BaseRichBolt{
 		String val=(String)input.getValueByField(key);
 		System.out.println("key:"+key+"val:"+val);
 	}
-
 	@Override
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 		// TODO Auto-generated method stub
